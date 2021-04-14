@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-    add_column :tasks, :notes, :text
+    validates :content, presence: true, length: {minimum: 4, maximum: 300}
 end
